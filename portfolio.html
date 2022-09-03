@@ -17,25 +17,26 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
     <title>Document</title>
   </head>
 
   <body>
-    <header class="header">
+<header class="header">
       <div class="container">
         <!-- Navigation -->
         <nav class="main-nav">
           <a href="./index.html" lang="en" class="logo">
-            Web<span class="logo__item logo__item--common">Studio</span>
+            <span class="logo__item">Web</span
+            ><span class="logo__item logo__item--common">Studio</span>
           </a>
 
           <ul class="site-nav">
             <li class="site-nav__item">
-              <a href="./index.html" class="site-nav__link current">Студия</a>
+              <a href="./index.html" class="site-nav__link">Студия</a>
             </li>
             <li class="site-nav__item">
-              <a href="./portfolio.html" class="site-nav__link">Портфолио</a>
+              <a href="./portfolio.html" class="site-nav__link current">Портфолио</a>
             </li>
             <li class="site-nav__item"><a href="" class="site-nav__link">Контакты</a></li>
           </ul>
@@ -45,7 +46,7 @@
         <ul class="contacts">
           <li class="contacts__item">
             <a href="mailto:info@devstudio.com" class="contacts__link">
-              <svg class="contacts__icon">
+              <svg class="contacts__icon" width='16px' height:='12px'>
                 <use href="./images/sprite.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com
@@ -53,7 +54,7 @@
           </li>
           <li class="contacts__item">
             <a href="tel:+380961111111" class="contacts__link">
-              <svg class="contacts__icon">
+              <svg class="contacts__icon" width='10px' height:='16px'>
                 <use href="./images/sprite.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11
@@ -70,19 +71,19 @@
           <h2 class="visually-hidden">Кнопки для сортировки работ</h2>
           <ul class="sorting-list">
             <li class="sorting-list_item">
-              <button type="button" class="sorting-list__btn">Все</button>
+              <button class="sorting-list__btn" type="button">Все</button>
             </li>
             <li class="sorting-list_item">
-              <button type="button" class="sorting-list__btn">Веб-сайты</button>
+              <button class="sorting-list__btn" type="button">Веб-сайты</button>
             </li>
             <li class="sorting-list_item">
-              <button type="button" class="sorting-list__btn">Приложения</button>
+              <button class="sorting-list__btn" type="button">Приложения</button>
             </li>
             <li class="sorting-list_item">
-              <button type="button" class="sorting-list__btn">Дизайн</button>
+              <button class="sorting-list__btn" type="button">Дизайн</button>
             </li>
             <li class="sorting-list_item">
-              <button type="button" class="sorting-list__btn">Маркетинг</button>
+              <button class="sorting-list__btn" type="button">Маркетинг</button>
             </li>
           </ul>
 
@@ -98,8 +99,8 @@
                     width="370"
                     class="img"
                   />
-                  <div class="portfolio-overlay">
-                    <div class="overlay-text">
+                  <div class="portfolio-list__overlay">
+                    <div class="portfolio-list__overlay-text">
                       <p>
                         Ресурс предлагает комплексные предложения с разным уровнем функционала и
                         сервисов. Все это позволит посетителю получить исчерпывающие сведения о
@@ -109,9 +110,9 @@
                   </div>
                 </div>
 
-                <div class="portfolio-text">
-                  <h2 class="title-portfolio">Технокряк</h2>
-                  <p class="work-type">Веб-сайт</p>
+                <div class="portfolio-list__desc">
+                  <h2 class="portfolio-list__title">Технокряк</h2>
+                  <p class="portfolio-list__subtitle">Веб-сайт</p>
                 </div>
               </a>
             </li>
@@ -125,8 +126,8 @@
                     width="370"
                     class="img"
                   />
-                  <div class="portfolio-overlay">
-                    <div class="overlay-text">
+                  <div class="portfolio-list__overlay">
+                    <div class="portfolio-list__overlay-text">
                       <p>
                         Ресурс предлагает комплексные предложения с разным уровнем функционала и
                         сервисов. Все это позволит посетителю получить исчерпывающие сведения о
@@ -136,9 +137,9 @@
                   </div>
                 </div>
 
-                <div class="portfolio-text">
-                  <h2 class="title-portfolio">Постер New Orlean vs Golden Star</h2>
-                  <p class="work-type">Дизайн</p>
+                <div class="portfolio-list__desc">
+                  <h2 class="portfolio-list__title">Постер New Orlean vs Golden Star</h2>
+                  <p class="portfolio-list__subtitle">Дизайн</p>
                 </div>
               </a>
             </li>
@@ -153,7 +154,7 @@
                     class="img"
                   />
                   <div class="portfolio-list__overlay">
-                    <div class="portfolio-list__text">
+                    <div class="portfolio-list__overlay-text">
                       <p>
                         Ресурс предлагает комплексные предложения с разным уровнем функционала и
                         сервисов. Все это позволит посетителю получить исчерпывающие сведения о
@@ -180,7 +181,7 @@
                     class="img"
                   />
                   <div class="portfolio-list__overlay">
-                    <div class="portfolio-list__text">
+                    <div class="portfolio-list__overlay-text">
                       <p>
                         Ресурс предлагает комплексные предложения с разным уровнем функционала и
                         сервисов. Все это позволит посетителю получить исчерпывающие сведения о
@@ -207,7 +208,7 @@
                     class="img"
                   />
                   <div class="portfolio-list__overlay">
-                    <div class="portfolio-list__text">
+                    <div class="portfolio-list__overlay-text">
                       <p>
                         Ресурс предлагает комплексные предложения с разным уровнем функционала и
                         сервисов. Все это позволит посетителю получить исчерпывающие сведения о
@@ -234,7 +235,7 @@
                     class="img"
                   />
                   <div class="portfolio-list__overlay">
-                    <div class="portfolio-list__text">
+                    <div class="portfolio-list__overlay-text">
                       <p>
                         Ресурс предлагает комплексные предложения с разным уровнем функционала и
                         сервисов. Все это позволит посетителю получить исчерпывающие сведения о
@@ -261,7 +262,7 @@
                     class="img"
                   />
                   <div class="portfolio-list__overlay">
-                    <div class="portfolio-list__text">
+                    <div class="portfolio-list__overlay-text">
                       <p>
                         Ресурс предлагает комплексные предложения с разным уровнем функционала и
                         сервисов. Все это позволит посетителю получить исчерпывающие сведения о
@@ -288,7 +289,7 @@
                     class="img"
                   />
                   <div class="portfolio-list__overlay">
-                    <div class="portfolio-list__text">
+                    <div class="portfolio-list__overlay-text">
                       <p>
                         Ресурс предлагает комплексные предложения с разным уровнем функционала и
                         сервисов. Все это позволит посетителю получить исчерпывающие сведения о
@@ -315,7 +316,7 @@
                     class="img"
                   />
                   <div class="portfolio-list__overlay">
-                    <div class="portfolio-list__text">
+                    <div class="portfolio-list__overlay-text">
                       <p>
                         Ресурс предлагает комплексные предложения с разным уровнем функционала и
                         сервисов. Все это позволит посетителю получить исчерпывающие сведения о
@@ -339,10 +340,11 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container container--footer">
-        <section class="address">
+        <section class="address-section">
           <h2 class="visually-hidden">Контактные данные</h2>
           <a href="./index.html" lang="en" class="logo">
-            Web<span class="logo__item logo__item--inverse">Studio</span>
+            <span class="logo__item">Web</span>
+            <span class="logo__item logo__item--inverse">Studio</span>
           </a>
           <address class="address">
             <p class="address__text">г. Киев, пр-т Леси Украинки, 26</p>
@@ -356,29 +358,45 @@
           <b class="join__title">ПРИСОЕДИНЯЙТЕСЬ</b>
           <ul class="social-list">
             <li class="social-list__item social-list__item--inverse">
-              <a class="social-list__link" href="">
-                <svg class="social-list__icon" width="20px" height="20px">
+              <a class="social-list__link social-list__link--inverse" href="">
+                <svg
+                  class="social-list__icon social-list__icon--inverse"
+                  width="20px"
+                  height="20px"
+                >
                   <use href="./images/sprite.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="social-list__item social-list__item--inverse">
-              <a class="social-list__link" href="">
-                <svg class="social-list__icon" width="20px" height="20px">
+              <a class="social-list__link social-list__link--inverse" href="">
+                <svg
+                  class="social-list__icon social-list__icon--inverse"
+                  width="20px"
+                  height="20px"
+                >
                   <use href="./images/sprite.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="social-list__item social-list__item--inverse">
-              <a class="social-list__link" href="">
-                <svg class="social-list__icon" width="20px" height="20px">
+              <a class="social-list__link social-list__link--inverse" href="">
+                <svg
+                  class="social-list__icon social-list__icon--inverse"
+                  width="20px"
+                  height="20px"
+                >
                   <use href="./images/sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="social-list__item social-list__item--inverse">
-              <a class="social-list__link" href="">
-                <svg class="social-list__icon" width="20px" height="20px">
+              <a class="social-list__link social-list__link--inverse" href="">
+                <svg
+                  class="social-list__icon social-list__icon--inverse"
+                  width="20px"
+                  height="20px"
+                >
                   <use href="./images/sprite.svg#icon-linkedin"></use>
                 </svg>
               </a>
