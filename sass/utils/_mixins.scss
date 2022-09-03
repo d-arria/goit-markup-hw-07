@@ -1,0 +1,13 @@
+@mixin centeredFlex($type: flex) {
+  display: $type;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin hover-delay($property) {
+  transition: $property 250ms $timing-function;
+}
+
+@mixin two-hover-delay($first-property, $second-property) {
+  transition: $first-property 250ms $timing-function, $second-property 250ms $timing-function;
+}

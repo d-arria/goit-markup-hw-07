@@ -1,0 +1,47 @@
+%section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+%title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+%list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin: 0;
+}
+
+%link {
+  @include hover-delay(color);
+  text-decoration: none;
+}
+
+%icon {
+  @include hover-delay(background-color);
+}
+
+%btn {
+  text-align: center;
+  min-width: 200px;
+  height: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  border: none;
+  border-radius: 4px;
+  background-color: $accent-color;
+  color: $white-text-color;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+}
