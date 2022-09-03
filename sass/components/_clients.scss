@@ -1,0 +1,52 @@
+.clients {
+  @extend %section;
+}
+
+.clients__title {
+  @extend %title;
+}
+
+.clients-list {
+  @extend %list;
+}
+
+.clients__title {
+  @extend %title;
+  margin-bottom: 50px;
+}
+
+.clients-list__item:not(:first-child) {
+  margin-left: 30px;
+}
+
+.clients-list__link {
+  @include centeredFlex();
+  @extend %link;
+
+  width: 170px;
+  height: 92px;
+  border: 1px solid $icon-primary-color;
+  border-radius: 4px;
+
+  @include hover-delay(border-color);
+
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+  }
+}
+
+.clients-list__icon {
+  fill: $icon-primary-color;
+  @include hover-delay(fill);
+
+  .clients-list__link:hover &,
+  .clients-list__link:focus & {
+    fill: $accent-color;
+  }
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}

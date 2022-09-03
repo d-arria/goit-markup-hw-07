@@ -1,0 +1,30 @@
+.hero {
+  text-align: center;
+  width: 100%;
+  padding: 200px 0;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: $accent-background-color;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/bg-image.jpg);
+}
+
+.hero__title {
+  margin-bottom: 30px;
+  text-align: center;
+
+  color: $hero-text-color;
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hero__btn {
+  @extend %btn;
+  display: inline-block;
+}

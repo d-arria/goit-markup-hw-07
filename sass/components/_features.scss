@@ -1,0 +1,38 @@
+.features {
+  @extend %section;
+  padding-bottom: 0;
+}
+
+.features-list {
+  @extend %list;
+}
+
+.features-list__item {
+  width: calc((100% - 90px) / 4);
+  margin-right: 30px;
+
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+
+.features-list__icon {
+  @include centeredFlex();
+  width: 270px;
+  height: 120px;
+  background-color: $secondary-background-color;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.features-list__subtitle {
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.features-list__text {
+  color: $secondary-text-color;
+  line-height: 1.71;
+}
