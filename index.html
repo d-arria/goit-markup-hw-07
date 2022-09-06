@@ -31,6 +31,91 @@
             ><span class="logo__item logo__item--common">Studio</span>
           </a>
 
+          <!-- Menu -->
+
+          <div class="header__mobile-menu">
+            <button class="header__button" type="button" data-mobile-menu-open>
+              <svg
+                class="header__icon"
+                width="40"
+                height="40"
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+                aria-label="Переключатель мобильного меню"
+              >
+                <use href="./images/sprite.svg#icon-menu"></use>
+              </svg>
+            </button>
+            <div class="header__drop-dowm-menu" id="mobile-menu" data-mobile-menu>
+              <button
+                class="header__button header__button--close"
+                type="button"
+                data-mobile-menu-close
+              >
+                <svg
+                  class="header__icon"
+                  width="40"
+                  height="40"
+                  aria-controls="menu-container"
+                  aria-label="Переключатель мобильного меню"
+                >
+                  <use href="./images/sprite.svg#icon-cross"></use>
+                </svg>
+              </button>
+              <ul class="navigation-list">
+                <li class="navigation-list__item">
+                  <a href="./index.html" class="navigation-list__link navigation-list__link--active"
+                    >Студия</a
+                  >
+                </li>
+                <li class="navigation-list__item">
+                  <a href="./portfolio.html" class="navigation-list__link">Портфолио</a>
+                </li>
+                <li class="navigation-list__item">
+                  <a href="#" class="navigation-list__link">Контакты</a>
+                </li>
+              </ul>
+              <ul class="navigation-contact-list">
+                <li class="navigation-contact-list__item">
+                  <a href="tel:+380961111111" class="navigation-contact-list__link"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+                <li class="navigation-contact-list__item">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="navigation-contact-list__link navigation-contact-list__link--smaller"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+              <ul class="text-social-list">
+                <li class="text-social-list__item">
+                  <a href="#" class="text-social-list__link">Instagram</a>
+                </li>
+                <li class="text-social-list__item">
+                  <span class="text-social-list__separator">|</span>
+                </li>
+                <li class="text-social-list__item">
+                  <a href="#" class="text-social-list__link">Twitter</a>
+                </li>
+                <li class="text-social-list__item">
+                  <span class="text-social-list__separator">|</span>
+                </li>
+                <li class="text-social-list__item">
+                  <a href="#" class="text-social-list__link">Facebook</a>
+                </li>
+                <li class="text-social-list__item">
+                  <span class="text-social-list__separator">|</span>
+                </li>
+                <li class="text-social-list__item">
+                  <a href="#" class="text-social-list__link">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- !Menu -->
+
           <ul class="site-nav">
             <li class="site-nav__item">
               <a href="./index.html" class="site-nav__link current">Студия</a>
@@ -46,7 +131,7 @@
         <ul class="contacts">
           <li class="contacts__item">
             <a href="mailto:info@devstudio.com" class="contacts__link">
-              <svg class="contacts__icon" width='16px' height:='12px'>
+              <svg class="contacts__icon" width="16px" height="12px">
                 <use href="./images/sprite.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com
@@ -54,10 +139,10 @@
           </li>
           <li class="contacts__item">
             <a href="tel:+380961111111" class="contacts__link">
-              <svg class="contacts__icon" width='10px' height:='16px'>
+              <svg class="contacts__icon" width="10px" height="16px">
                 <use href="./images/sprite.svg#icon-smartphone"></use>
               </svg>
-              +38 096 111 11 11
+              <span>+38 096 111 11 11</span>
             </a>
           </li>
         </ul>
@@ -202,9 +287,9 @@
             <li class="activity-list__item">
               <div class="activity-list__thumb">
                 <img
-                  src="./images/coding.jpg"
+                  srcset="./images/programming.jpg 1x, ./images/programming@2x.jpg 2x"
+                  src="./images/programming.jpg"
                   alt="Человек набирает код на клавиатуре"
-                  width="370"
                   class="img"
                 />
                 <div class="activity-list__desc">
@@ -215,9 +300,9 @@
             <li class="activity-list__item">
               <div class="activity-list__thumb">
                 <img
-                  src="./images/layout-for-phone.jpg"
+                  srcset="./images/maket.jpg 1x, ./images/maket@2x.jpg 2x"
+                  src="./images/maket.jpg"
                   alt="Человек сравнивает макеты сайта для телефона"
-                  width="370"
                   class="img"
                 />
                 <div class="activity-list__desc">
@@ -228,9 +313,9 @@
             <li class="activity-list__item">
               <div class="activity-list__thumb">
                 <img
-                  src="./images/color-selection.jpg"
+                  srcset="./images/colour-selection.jpg 1x, ./images/colour-selection@2x.jpg 2x"
+                  src="./images/colour-selection.jpg"
                   alt="Человек выбирает цветовую палитру на планшете"
-                  width="370"
                   class="img"
                 />
                 <div class="activity-list__desc">
@@ -248,12 +333,40 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team-list">
             <li class="team-list__item">
-              <img
-                src="./images/igor-demianenko.jpg"
-                alt="Улыбающийся темноволосый мужчина с бородой и в очках"
-                width="270"
-                class="img"
-              />
+              <picture class="img">
+                <source
+                  srcset="
+                    ./images/product-designer-270.jpg    270w,
+                    ./images/product-designer-270@2x.jpg 540w,
+                    ./images/product-designer-270@3x.jpg 810w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 270px, 30vw"
+                />
+                <source
+                  srcset="
+                    ./images/product-designer-354.jpg     354w,
+                    ./images/product-designer-354@2x.jpg  708w,
+                    ./images/product-designer-354@3x.jpg 1062w
+                  "
+                  media="(min-width: 768px)"
+                  sizes="(min-width: 768px) 354px, 46vw"
+                />
+                <source
+                  srcset="
+                    ./images/product-designer-450.jpg     450w,
+                    ./images/product-designer-450@2x.jpg  900w,
+                    ./images/product-designer-450@3x.jpg 1350w
+                  "
+                  media="(max-width: 767px)"
+                  sizes="(min-width: 480px) 450px, 100vw"
+                />
+
+                <img
+                  src="./images/product-designer-450.jpg"
+                  alt="Улыбающийся темноволосый мужчина с бородой и в очках"
+                />
+              </picture>
               <div class="team-list__desc">
                 <h3 class="team-list__title">Игорь Демьяненко</h3>
                 <p class="team-list__subtitle">Product Designer</p>
@@ -291,12 +404,39 @@
             </li>
 
             <li class="team-list__item">
-              <img
-                src="./images/olga-repina.jpg"
-                alt="Улыбающаяся светловолосая женщина в очках"
-                width="270"
-                class="img"
-              />
+              <picture class="img">
+                <source
+                  srcset="
+                    ./images/frontend-developer-270.jpg    270w,
+                    ./images/frontend-developer-270@2x.jpg 540w,
+                    ./images/frontend-developer-270@3x.jpg 810w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 270px, 30vw"
+                />
+                <source
+                  srcset="
+                    ./images/frontend-developer-354.jpg     354w,
+                    ./images/frontend-developer-354@2x.jpg  708w,
+                    ./images/frontend-developer-354@3x.jpg 1062w
+                  "
+                  media="(min-width: 768px)"
+                  sizes="(min-width: 768px) 354px, 46vw"
+                />
+                <source
+                  srcset="
+                    ./images/frontend-developer-450.jpg     450w,
+                    ./images/frontend-developer-450@2x.jpg  900w,
+                    ./images/frontend-developer-450@3x.jpg 1350w
+                  "
+                  media="(max-width: 767px)"
+                  sizes="(min-width: 480px) 450px, 100vw"
+                />
+                <img
+                  src="./images/frontend-developer-450.jpg"
+                  alt="Улыбающаяся светловолосая женщина в очках"
+                />
+              </picture>
               <div class="team-list__desc">
                 <h3 class="team-list__title">Ольга Репина</h3>
                 <p class="team-list__subtitle">Frontend Developer</p>
@@ -334,12 +474,39 @@
             </li>
 
             <li class="team-list__item">
-              <img
-                src="./images/nikolay-tarasov.jpg"
-                alt="Улыбающийся русый мужчина с бородой и в рубашке"
-                width="270"
-                class="img"
-              />
+              <picture class="img">
+                <source
+                  srcset="
+                    ./images/marketing-270.jpg    270w,
+                    ./images/marketing-270@2x.jpg 540w,
+                    ./images/marketing-270@3x.jpg 810w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 270px, 30vw"
+                />
+                <source
+                  srcset="
+                    ./images/marketing-354.jpg     354w,
+                    ./images/marketing-354@2x.jpg  708w,
+                    ./images/marketing-354@3x.jpg 1062w
+                  "
+                  media="(min-width: 768px)"
+                  sizes="(min-width: 768px) 354px, 46vw"
+                />
+                <source
+                  srcset="
+                    ./images/marketing-450.jpg     450w,
+                    ./images/marketing-450@2x.jpg  900w,
+                    ./images/marketing-450@3x.jpg 1350w
+                  "
+                  media="(max-width: 767px)"
+                  sizes="(min-width: 480px) 450px, 100vw"
+                />
+                <img
+                  src="./images/marketing-450.jpg"
+                  alt="Улыбающийся русый мужчина с бородой и в рубашке"
+                />
+              </picture>
               <div class="team-list__desc">
                 <h3 class="team-list__title">Николай Тарасов</h3>
                 <p class="team-list__subtitle">Marketing</p>
@@ -377,12 +544,39 @@
             </li>
 
             <li class="team-list__item">
-              <img
-                src="./images/mikhail-ermakov.jpg"
-                alt="Улыбающийся темноволосый мужчина с бородой и в очках"
-                width="270"
-                class="img"
-              />
+              <picture class="img">
+                <source
+                  srcset="
+                    ./images/UI-designer-270.jpg    270w,
+                    ./images/UI-designer-270@2x.jpg 540w,
+                    ./images/UI-designer-270@3x.jpg 810w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 270px, 30vw"
+                />
+                <source
+                  srcset="
+                    ./images/UI-designer-354.jpg     354w,
+                    ./images/UI-designer-354@2x.jpg  708w,
+                    ./images/UI-designer-354@3x.jpg 1062w
+                  "
+                  media="(min-width: 768px)"
+                  sizes="(min-width: 768px) 354px, 46vw"
+                />
+                <source
+                  srcset="
+                    ./images/UI-designer-450.jpg     450w,
+                    ./images/UI-designer-450@2x.jpg  900w,
+                    ./images/UI-designer-450@3x.jpg 1350w
+                  "
+                  media="(max-width: 767px)"
+                  sizes="(min-width: 480px) 450px, 100vw"
+                />
+                <img
+                  src="./images/UI-designer-450.jpg"
+                  alt="Улыбающийся темноволосый мужчина с бородой и в очках"
+                />
+              </picture>
               <div class="team-list__desc">
                 <h3 class="team-list__title">Михаил Ермаков</h3>
                 <p class="team-list__subtitle">UI Designer</p>
@@ -497,28 +691,44 @@
           <ul class="social-list">
             <li class="social-list__item social-list__item--inverse">
               <a class="social-list__link social-list__link--inverse" href="">
-                <svg class="social-list__icon social-list__icon--inverse" width="20px" height="20px">
+                <svg
+                  class="social-list__icon social-list__icon--inverse"
+                  width="20px"
+                  height="20px"
+                >
                   <use href="./images/sprite.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="social-list__item social-list__item--inverse">
               <a class="social-list__link social-list__link--inverse" href="">
-                <svg class="social-list__icon social-list__icon--inverse" width="20px" height="20px">
+                <svg
+                  class="social-list__icon social-list__icon--inverse"
+                  width="20px"
+                  height="20px"
+                >
                   <use href="./images/sprite.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="social-list__item social-list__item--inverse">
               <a class="social-list__link social-list__link--inverse" href="">
-                <svg class="social-list__icon social-list__icon--inverse" width="20px" height="20px">
+                <svg
+                  class="social-list__icon social-list__icon--inverse"
+                  width="20px"
+                  height="20px"
+                >
                   <use href="./images/sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="social-list__item social-list__item--inverse">
               <a class="social-list__link social-list__link--inverse" href="">
-                <svg class="social-list__icon social-list__icon--inverse" width="20px" height="20px">
+                <svg
+                  class="social-list__icon social-list__icon--inverse"
+                  width="20px"
+                  height="20px"
+                >
                   <use href="./images/sprite.svg#icon-linkedin"></use>
                 </svg>
               </a>
@@ -545,5 +755,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

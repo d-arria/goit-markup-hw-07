@@ -34,8 +34,6 @@ img {
 
 // Body
 body {
-  padding-top: 80px;
-
   background-color: $primary-background-color;
   color: $primary-text-color;
   font-family: $main-font;
@@ -44,6 +42,18 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
+
+  @media screen and (max-width: 1199px) {
+    padding-top: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 80px;
+  }
+
+  &.modal-open {
+    overflow: hidden;
+  }
 }
 
 button {
@@ -67,8 +77,19 @@ button {
 }
 
 .container {
-  width: 1200px;
-  padding: 0 15px;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
 }

@@ -22,7 +22,7 @@
   </head>
 
   <body>
-<header class="header">
+    <header class="header">
       <div class="container">
         <!-- Navigation -->
         <nav class="main-nav">
@@ -30,6 +30,93 @@
             <span class="logo__item">Web</span
             ><span class="logo__item logo__item--common">Studio</span>
           </a>
+
+          <!-- Menu -->
+
+          <div class="header__mobile-menu">
+            <button class="header__button" type="button" data-mobile-menu-open>
+              <svg
+                class="header__icon"
+                width="40"
+                height="40"
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+                aria-label="Переключатель мобильного меню"
+              >
+                <use href="./images/sprite.svg#icon-menu"></use>
+              </svg>
+            </button>
+            <div class="header__drop-dowm-menu" id="mobile-menu" data-mobile-menu>
+              <button
+                class="header__button header__button--close"
+                type="button"
+                data-mobile-menu-close
+              >
+                <svg
+                  class="header__icon"
+                  width="40"
+                  height="40"
+                  aria-controls="menu-container"
+                  aria-label="Переключатель мобильного меню"
+                >
+                  <use href="./images/sprite.svg#icon-cross"></use>
+                </svg>
+              </button>
+              <ul class="navigation-list">
+                <li class="navigation-list__item">
+                  <a href="./index.html" class="navigation-list__link">Студия</a>
+                </li>
+                <li class="navigation-list__item">
+                  <a
+                    href="./portfolio.html"
+                    class="navigation-list__link navigation-list__link--active"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="navigation-list__item">
+                  <a href="#" class="navigation-list__link">Контакты</a>
+                </li>
+              </ul>
+              <ul class="navigation-contact-list">
+                <li class="navigation-contact-list__item">
+                  <a href="tel:+380961111111" class="navigation-contact-list__link"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+                <li class="navigation-contact-list__item">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="navigation-contact-list__link navigation-contact-list__link--smaller"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+              <ul class="text-social-list">
+                <li class="text-social-list__item">
+                  <a href="#" class="text-social-list__link">Instagram</a>
+                </li>
+                <li class="text-social-list__item">
+                  <span class="text-social-list__separator">|</span>
+                </li>
+                <li class="text-social-list__item">
+                  <a href="#" class="text-social-list__link">Twitter</a>
+                </li>
+                <li class="text-social-list__item">
+                  <span class="text-social-list__separator">|</span>
+                </li>
+                <li class="text-social-list__item">
+                  <a href="#" class="text-social-list__link">Facebook</a>
+                </li>
+                <li class="text-social-list__item">
+                  <span class="text-social-list__separator">|</span>
+                </li>
+                <li class="text-social-list__item">
+                  <a href="#" class="text-social-list__link">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- !Menu -->
 
           <ul class="site-nav">
             <li class="site-nav__item">
@@ -46,7 +133,7 @@
         <ul class="contacts">
           <li class="contacts__item">
             <a href="mailto:info@devstudio.com" class="contacts__link">
-              <svg class="contacts__icon" width='16px' height:='12px'>
+              <svg class="contacts__icon" width="16px" height="12px">
                 <use href="./images/sprite.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com
@@ -54,10 +141,10 @@
           </li>
           <li class="contacts__item">
             <a href="tel:+380961111111" class="contacts__link">
-              <svg class="contacts__icon" width='10px' height:='16px'>
+              <svg class="contacts__icon" width="10px" height="16px">
                 <use href="./images/sprite.svg#icon-smartphone"></use>
               </svg>
-              +38 096 111 11 11
+              <span>+38 096 111 11 11</span>
             </a>
           </li>
         </ul>
@@ -93,12 +180,37 @@
             <li class="portfolio-list__item">
               <a href="" class="portfolio-list__link">
                 <div class="portfolio-list__thumb">
-                  <img
-                    src="./images/portfolio/technocrack.jpg"
-                    alt="Веб-сайт на ноутбуке"
-                    width="370"
-                    class="img"
-                  />
+                  <picture class="img"
+                    ><source
+                      srcset="
+                        ./images/technokryak-370.jpg     370w,
+                        ./images/technokryak-370@2x.jpg  740w,
+                        ./images/technokryak-370@3x.jpg 1110w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 30vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/technokryak-354.jpg     354w,
+                        ./images/technokryak-354@2x.jpg  708w,
+                        ./images/technokryak-354@3x.jpg 1062w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="(min-width: 768px) 354px, 46vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/technokryak-450.jpg     450w,
+                        ./images/technokryak-450@2x.jpg  900w,
+                        ./images/technokryak-450@3x.jpg 1350w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(min-width: 480px) 450px, 100vw"
+                    />
+
+                    <img src="./images/technokryak-450.jpg" alt="Веб-сайт на ноутбуке" />
+                  </picture>
                   <div class="portfolio-list__overlay">
                     <div class="portfolio-list__overlay-text">
                       <p>
@@ -120,12 +232,40 @@
             <li class="portfolio-list__item">
               <a href="" class="portfolio-list__link">
                 <div class="portfolio-list__thumb">
-                  <img
-                    src="./images/portfolio/neworlean-vs-goldenstar.jpg"
-                    alt='Два баскетболиста в форме "New Orlean" и "Golden Star"'
-                    width="370"
-                    class="img"
-                  />
+                  <picture class="img"
+                    ><source
+                      srcset="
+                        ./images/poster-370.jpg     370w,
+                        ./images/poster-370@2x.jpg  740w,
+                        ./images/poster-370@3x.jpg 1110w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 30vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/poster-354.jpg     354w,
+                        ./images/poster-354@2x.jpg  708w,
+                        ./images/poster-354@3x.jpg 1062w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="(min-width: 768px) 354px, 46vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/poster-450.jpg     450w,
+                        ./images/poster-450@2x.jpg  900w,
+                        ./images/poster-450@3x.jpg 1350w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(min-width: 480px) 450px, 100vw"
+                    />
+
+                    <img
+                      src="./images/poster-450.jpg"
+                      alt='Два баскетболиста в форме "New Orlean" и "Golden Star"'
+                    />
+                  </picture>
                   <div class="portfolio-list__overlay">
                     <div class="portfolio-list__overlay-text">
                       <p>
@@ -147,12 +287,40 @@
             <li class="portfolio-list__item">
               <a href="" class="portfolio-list__link">
                 <div class="portfolio-list__thumb">
-                  <img
-                    src="./images/portfolio/seafood.jpg"
-                    alt="Название ресторана на фоне рыбы"
-                    width="370"
-                    class="img"
-                  />
+                  <picture class="img"
+                    ><source
+                      srcset="
+                        ./images/restaurant-seafood-370.jpg     370w,
+                        ./images/restaurant-seafood-370@2x.jpg  740w,
+                        ./images/restaurant-seafood-370@3x.jpg 1110w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 30vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/restaurant-seafood-354.jpg     354w,
+                        ./images/restaurant-seafood-354@2x.jpg  708w,
+                        ./images/restaurant-seafood-354@3x.jpg 1062w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="(min-width: 768px) 354px, 46vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/restaurant-seafood-450.jpg     450w,
+                        ./images/restaurant-seafood-450@2x.jpg  900w,
+                        ./images/restaurant-seafood-450@3x.jpg 1350w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(min-width: 480px) 450px, 100vw"
+                    />
+
+                    <img
+                      src="./images/restaurant-seafood-450.jpg"
+                      alt="Название ресторана на фоне рыбы"
+                    />
+                  </picture>
                   <div class="portfolio-list__overlay">
                     <div class="portfolio-list__overlay-text">
                       <p>
@@ -174,12 +342,37 @@
             <li class="portfolio-list__item">
               <a href="" class="portfolio-list__link">
                 <div class="portfolio-list__thumb">
-                  <img
-                    src="./images/portfolio/headphones.jpg"
-                    alt="Наушники накладные"
-                    width="370"
-                    class="img"
-                  />
+                  <picture class="img"
+                    ><source
+                      srcset="
+                        ./images/project-prime-370.jpg     370w,
+                        ./images/project-prime-370@2x.jpg  740w,
+                        ./images/project-prime-370@3x.jpg 1110w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 30vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/project-prime-354.jpg     354w,
+                        ./images/project-prime-354@2x.jpg  708w,
+                        ./images/project-prime-354@3x.jpg 1062w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="(min-width: 768px) 354px, 46vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/project-prime-450.jpg     450w,
+                        ./images/project-prime-450@2x.jpg  900w,
+                        ./images/project-prime-450@3x.jpg 1350w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(min-width: 480px) 450px, 100vw"
+                    />
+
+                    <img src="./images/project-prime-450.jpg" alt="Наушники накладные" />
+                  </picture>
                   <div class="portfolio-list__overlay">
                     <div class="portfolio-list__overlay-text">
                       <p>
@@ -201,12 +394,37 @@
             <li class="portfolio-list__item">
               <a href="" class="portfolio-list__link">
                 <div class="portfolio-list__thumb">
-                  <img
-                    src="./images/portfolio/boxes.jpg"
-                    alt="Белая и коричневая коробки"
-                    width="370"
-                    class="img"
-                  />
+                  <picture class="img"
+                    ><source
+                      srcset="
+                        ./images/project-boxes-370.jpg     370w,
+                        ./images/project-boxes-370@2x.jpg  740w,
+                        ./images/project-boxes-370@3x.jpg 1110w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 30vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/project-boxes-354.jpg     354w,
+                        ./images/project-boxes-354@2x.jpg  708w,
+                        ./images/project-boxes-354@3x.jpg 1062w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="(min-width: 768px) 354px, 46vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/project-boxes-450.jpg     450w,
+                        ./images/project-boxes-450@2x.jpg  900w,
+                        ./images/project-boxes-450@3x.jpg 1350w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(min-width: 480px) 450px, 100vw"
+                    />
+
+                    <img src="./images/project-boxes-450.jpg" alt="Белая и коричневая коробки" />
+                  </picture>
                   <div class="portfolio-list__overlay">
                     <div class="portfolio-list__overlay-text">
                       <p>
@@ -228,12 +446,37 @@
             <li class="portfolio-list__item">
               <a href="" class="portfolio-list__link">
                 <div class="portfolio-list__thumb">
-                  <img
-                    src="./images/portfolio/mac-desktop.jpg"
-                    alt="Монитор Apple"
-                    width="370"
-                    class="img"
-                  />
+                  <picture class="img"
+                    ><source
+                      srcset="
+                        ./images/inspiration-370.jpg     370w,
+                        ./images/inspiration-370@2x.jpg  740w,
+                        ./images/inspiration-370@3x.jpg 1110w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 30vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/inspiration-354.jpg     354w,
+                        ./images/inspiration-354@2x.jpg  708w,
+                        ./images/inspiration-354@3x.jpg 1062w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="(min-width: 768px) 354px, 46vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/inspiration-450.jpg     450w,
+                        ./images/inspiration-450@2x.jpg  900w,
+                        ./images/inspiration-450@3x.jpg 1350w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(min-width: 480px) 450px, 100vw"
+                    />
+
+                    <img src="./images/inspiration-450.jpg" alt="Монитор Apple" />
+                  </picture>
                   <div class="portfolio-list__overlay">
                     <div class="portfolio-list__overlay-text">
                       <p>
@@ -255,12 +498,37 @@
             <li class="portfolio-list__item">
               <a href="" class="portfolio-list__link">
                 <div class="portfolio-list__thumb">
-                  <img
-                    src="./images/portfolio/limited-edition.jpg"
-                    alt="Раскрытый журнал"
-                    width="370"
-                    class="img"
-                  />
+                  <picture class="img"
+                    ><source
+                      srcset="
+                        ./images/edition-limited-370.jpg     370w,
+                        ./images/edition-limited-370@2x.jpg  740w,
+                        ./images/edition-limited-370@3x.jpg 1110w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 30vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/edition-limited-354.jpg     354w,
+                        ./images/edition-limited-354@2x.jpg  708w,
+                        ./images/edition-limited-354@3x.jpg 1062w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="(min-width: 768px) 354px, 46vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/edition-limited-450.jpg     450w,
+                        ./images/edition-limited-450@2x.jpg  900w,
+                        ./images/edition-limited-450@3x.jpg 1350w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(min-width: 480px) 450px, 100vw"
+                    />
+
+                    <img src="./images/edition-limited-450.jpg" alt="Раскрытый журнал" />
+                  </picture>
                   <div class="portfolio-list__overlay">
                     <div class="portfolio-list__overlay-text">
                       <p>
@@ -282,12 +550,37 @@
             <li class="portfolio-list__item">
               <a href="" class="portfolio-list__link">
                 <div class="portfolio-list__thumb">
-                  <img
-                    src="./images/portfolio/label.jpg"
-                    alt="Белая бирка"
-                    width="370"
-                    class="img"
-                  />
+                  <picture class="img"
+                    ><source
+                      srcset="
+                        ./images/project-lab-370.jpg     370w,
+                        ./images/project-lab-370@2x.jpg  740w,
+                        ./images/project-lab-370@3x.jpg 1110w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 30vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/project-lab-354.jpg     354w,
+                        ./images/project-lab-354@2x.jpg  708w,
+                        ./images/project-lab-354@3x.jpg 1062w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="(min-width: 768px) 354px, 46vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/project-lab-450.jpg     450w,
+                        ./images/project-lab-450@2x.jpg  900w,
+                        ./images/project-lab-450@3x.jpg 1350w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(min-width: 480px) 450px, 100vw"
+                    />
+
+                    <img src="./images/project-lab-450.jpg" alt="Бірка з назвою" />
+                  </picture>
                   <div class="portfolio-list__overlay">
                     <div class="portfolio-list__overlay-text">
                       <p>
@@ -309,12 +602,39 @@
             <li class="portfolio-list__item">
               <a href="" class="portfolio-list__link">
                 <div class="portfolio-list__thumb">
-                  <img
-                    src="./images/portfolio/business.jpg"
-                    alt="Человек работает на ноутбуке"
-                    width="370"
-                    class="img"
-                  />
+                  <picture class="img">
+                    <source
+                      srcset="
+                        ./images/growing-business-370.jpg     370w,
+                        ./images/growing-business-370@2x.jpg  740w,
+                        ./images/growing-business-370@3x.jpg 1110w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 30vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/growing-business-354.jpg     354w,
+                        ./images/growing-business-354@2x.jpg  708w,
+                        ./images/growing-business-354@3x.jpg 1062w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="(min-width: 768px) 354px, 46vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/growing-business-450.jpg     450w,
+                        ./images/growing-business-450@2x.jpg  900w,
+                        ./images/growing-business-450@3x.jpg 1350w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(min-width: 480px) 450px, 100vw"
+                    />
+                    <img
+                      src="./images/growing-business-450.jpg"
+                      alt="Человек работает на ноутбуке"
+                    />
+                  </picture>
                   <div class="portfolio-list__overlay">
                     <div class="portfolio-list__overlay-text">
                       <p>
@@ -423,5 +743,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
